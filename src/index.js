@@ -5,6 +5,8 @@ import App from './App';
 import Lazyload from './Lazyload';
 import LazyloadHtml from './LazyloadHtml';
 import Optimized from './Optimized';
+import Priority from './Priority';
+import OptimizedPriority from './OptimizedPriority';
 //import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router";
 
@@ -17,6 +19,8 @@ root.render(
       <Route path="/lazy" element={<Lazyload />} />
       <Route path="/lazy-html" element={<LazyloadHtml />} />
       <Route path="/optimized" element={<Optimized />} />
+      <Route path="/priority" element={<Priority />} />
+      <Route path="/optimized-priority" element={<OptimizedPriority />} />
     </Routes>
   </BrowserRouter>
 );

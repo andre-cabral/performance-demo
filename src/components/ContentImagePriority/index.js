@@ -1,11 +1,8 @@
 import './ContentImagePriority.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function ContentImagePriority({
   image,
   alt = '',
-  lazy = false,
-  lazyHtml = false,
   title = '',
   text = '',
   index = 0
@@ -13,19 +10,13 @@ function ContentImagePriority({
   return (
     <div className="content-image-priority">
       {
-        lazy 
-          ? 
-          lazyHtml
-            ?
-              <img loading="lazy" fetchpriority={index <= 1 ? 'high' : 'low'} src={image} className="content-image-priority__image" alt={alt} />
-            :
-              <LazyLoadImage
-                alt={alt}
-                src={image}
-                className="content-image-priority__image"
-              />
+        index <= 1
+          ?
+            <>
+              <img fetchpriority="high" src={image} className="content-image-priority__image" alt={alt} />
+            </>
           : 
-          <img fetchpriority={index <= 1 ? 'high' : 'low'} src={image} className="content-image-priority__image" alt={alt} />
+            <img fetchpriority="low" src={image} className="content-image-priority__image" alt={alt} />
       }
 
       <div className="content-image__content">
