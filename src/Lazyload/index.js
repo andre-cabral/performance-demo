@@ -1,4 +1,4 @@
-import './App.css';
+import './Lazyload.css';
 import butterfly from './images/butterfly.jpg';
 import cat from './images/cat.jpg';
 import dog from './images/dog.jpg';
@@ -7,53 +7,54 @@ import jellyfish from './images/jellyfish.jpg';
 import {ContentImage}  from'../components/ContentImage';
 import {Header}  from'../components/Header';
 
-function App() {
+function Lazyload() {
   const imageList = [
     {
       image: butterfly,
       alt: 'butterfly',
-      lazy: false,
+      lazy: true,
       title: 'Butterfly Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: cat,
       alt: 'cat',
-      lazy: false,
+      lazy: true,
       title: 'Cat Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: dog,
       alt: 'dog',
-      lazy: false,
+      lazy: true,
       title: 'Dog Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: globe,
       alt: 'globe',
-      lazy: false,
+      lazy: true,
       title: 'Globe Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: jellyfish,
       alt: 'jellyfish',
-      lazy: false,
+      lazy: true,
       title: 'Jellyfish Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
   ];
+
   return (
-    <div className="app">
-      <Header text="Header no optimization." />
-      <div className="app__content">
+    <div className="lazy">
+      <Header text="Header lazy load on img with plugin." />
+      <div className="lazy__content">
         {
           imageList.map((item, index) => {
             return (
               <ContentImage
-                key={`app-image-${index}`}
+                key={`lazy-image-${index}`}
                 {...item}
               />
             );
@@ -64,4 +65,4 @@ function App() {
   );
 }
 
-export default App;
+export default Lazyload;

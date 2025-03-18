@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Lazyload from './Lazyload';
+import LazyloadHtml from './LazyloadHtml';
+import Optimized from './Optimized';
 //import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router";
 
@@ -11,7 +14,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/test" element={<div>test</div>} />
+      <Route path="/lazy" element={<Lazyload />} />
+      <Route path="/lazy-html" element={<LazyloadHtml />} />
+      <Route path="/optimized" element={<Optimized />} />
     </Routes>
   </BrowserRouter>
 );

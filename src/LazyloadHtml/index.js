@@ -1,4 +1,4 @@
-import './App.css';
+import './LazyloadHtml.css';
 import butterfly from './images/butterfly.jpg';
 import cat from './images/cat.jpg';
 import dog from './images/dog.jpg';
@@ -7,53 +7,59 @@ import jellyfish from './images/jellyfish.jpg';
 import {ContentImage}  from'../components/ContentImage';
 import {Header}  from'../components/Header';
 
-function App() {
+function LazyloadHtml() {
   const imageList = [
     {
       image: butterfly,
       alt: 'butterfly',
-      lazy: false,
+      lazy: true,
+      lazyHtml: true,
       title: 'Butterfly Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: cat,
       alt: 'cat',
-      lazy: false,
+      lazy: true,
+      lazyHtml: true,
       title: 'Cat Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: dog,
       alt: 'dog',
-      lazy: false,
+      lazy: true,
+      lazyHtml: true,
       title: 'Dog Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: globe,
       alt: 'globe',
-      lazy: false,
+      lazy: true,
+      lazyHtml: true,
       title: 'Globe Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
     {
       image: jellyfish,
       alt: 'jellyfish',
-      lazy: false,
+      lazy: true,
+      lazyHtml: true,
       title: 'Jellyfish Image',
       text: 'Lorem ipsum dolor sit amet conspictetur adispicing amet.'
     },
   ];
+
   return (
-    <div className="app">
-      <Header text="Header no optimization." />
-      <div className="app__content">
+    <div className="lazy-html">
+      <Header text="Header lazy load on img html with load=''." />
+      <div className="lazy-html__content">
         {
           imageList.map((item, index) => {
             return (
               <ContentImage
-                key={`app-image-${index}`}
+                key={`lazy-image-${index}`}
                 {...item}
               />
             );
@@ -64,4 +70,4 @@ function App() {
   );
 }
 
-export default App;
+export default LazyloadHtml;

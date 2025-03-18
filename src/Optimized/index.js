@@ -1,13 +1,13 @@
-import './App.css';
-import butterfly from './images/butterfly.jpg';
-import cat from './images/cat.jpg';
-import dog from './images/dog.jpg';
-import globe from './images/globe.jpg';
-import jellyfish from './images/jellyfish.jpg';
+import './Optimized.css';
+import butterfly from './images/butterfly.webp';
+import cat from './images/cat.webp';
+import dog from './images/dog.webp';
+import globe from './images/globe.webp';
+import jellyfish from './images/jellyfish.webp';
 import {ContentImage}  from'../components/ContentImage';
 import {Header}  from'../components/Header';
 
-function App() {
+function Optimized() {
   const imageList = [
     {
       image: butterfly,
@@ -46,9 +46,9 @@ function App() {
     },
   ];
   return (
-    <div className="app">
-      <Header text="Header no optimization." />
-      <div className="app__content">
+    <div className="optimized">
+      <Header text="Header only with image optimization." />
+      <div className="optimized__content">
         {
           imageList.map((item, index) => {
             return (
@@ -64,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default Optimized;
