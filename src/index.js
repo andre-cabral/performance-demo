@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Lazyload from './Lazyload';
-import LazyloadHtml from './LazyloadHtml';
 import Optimized from './Optimized';
 import Priority from './Priority';
 import OptimizedPriority from './OptimizedPriority';
@@ -18,7 +17,6 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/lazy" element={<Lazyload />} />
-      <Route path="/lazy-html" element={<LazyloadHtml />} />
       <Route path="/optimized" element={<Optimized />} />
       <Route path="/priority" element={<Priority />} />
       <Route path="/optimized-priority" element={<OptimizedPriority />} />
